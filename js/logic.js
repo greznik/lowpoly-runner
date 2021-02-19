@@ -49,7 +49,7 @@ let treeContainer;
 let numberOfTrees = 0;
 let treeTimer;
 
-const audio = new Audio("http://145.239.26.146:7750/;stream/1");
+let audio = new Audio("http://145.239.26.146:7750/;stream/1.mp3");
 audio.volume = 0.01;
 
 setupTrees = () => {
@@ -257,7 +257,7 @@ gameOver = () => {
 startGame = () => {
   if (isGameRunning) return;
   isGameRunning = true;
-
+  
   audio.play();
   setupScore();
   updateScoreDisplay();
@@ -294,7 +294,7 @@ shuffle = (a) => {
 /**
  * Checks for mobile and tablet platforms.
  */
-function mobileCheck() {
+mobileCheck = () => {
   var check = false;
   (function (a) {
     if (
@@ -308,4 +308,4 @@ function mobileCheck() {
       check = true;
   })(navigator.userAgent || navigator.vendor || window.opera);
   return check;
-}
+};
