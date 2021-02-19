@@ -10,15 +10,22 @@ Created by Alvin Wan (alvinwan.com)
     <script src="https://unpkg.com/aframe-simple-sun-sky@^1.2.2/simple-sun-sky.js"></script>
     <script src="./js/ocean.js"></script>
     <script src="./js/logic.js"></script>
+    <script src="./js/audio.js"></script>
   </head>
   <body>
-    <a-scene fog="type: linear; color: #e81088; near:5; far:20">
-      <a-simple-sun-sky sun-position="0 0.1 -1" radius="3000" light-color="#000000" fog-color="#e81088" radius="20000"></a-simple-sun-sky>
-      <a-entity light="type: directional; color: #e81088; intensity: 0.6" position="0.7 0.4 -1"></a-entity>
+    <a-scene fog="type: linear; color: #F83E70; near:5; far:18">
+      <a-simple-sun-sky
+        sun-position="0 0.1 -1"
+        radius="12"
+        light-color="#0D0A1B"
+        fog-color="#F83E70"
+        radius="20000"
+      ></a-simple-sun-sky>
+      <!-- <a-entity
+        light="type: directional; color: #dc64fc; intensity: 2"
+        position="0.7 0.4 -1"
+      ></a-entity> -->
       <a-entity light="type: ambient; color: #e81088"></a-entity>
-      <!-- <a-sky
-        material="shader: gradient; topColor: 32 13 58; bottomColor: 206 94 130;"
-      ></a-sky> -->
 
       <!-- Mixins -->
       <a-assets>
@@ -230,8 +237,8 @@ Created by Alvin Wan (alvinwan.com)
         segments-radial="20"
         segments-height="20"
         height="20"
-        emissive="#e81088"
-        emissive-intensity="0.5"
+        emissive="#005DED"
+        emissive-intensity="0.1"
       >
         <a-entity id="tree-container" position="0 .5 -1.5" rotation="-90 0 0">
           <!-- Trees -->
@@ -243,8 +250,12 @@ Created by Alvin Wan (alvinwan.com)
             scale="0.3 0.3 0.3"
             position="0 0.6 0"
           >
-            <a-entity mixin="foliage"></a-entity>
-            <a-entity mixin="trunk" position="0 -0.5 0"></a-entity>
+            <a-entity mixin="foliage" material="color: green"></a-entity>
+            <a-entity
+              mixin="trunk"
+              position="0 -0.5 0"
+              material="color: brown"
+            ></a-entity>
             <a-animation
               attribute="position"
               ease="linear"
@@ -262,8 +273,12 @@ Created by Alvin Wan (alvinwan.com)
             scale="0.3 0.3 0.3"
             position="-0.5 0.55 0"
           >
-            <a-entity mixin="foliage"></a-entity>
-            <a-entity mixin="trunk" position="0 -0.5 0"></a-entity>
+            <a-entity mixin="foliage" material="color: green"></a-entity>
+            <a-entity
+              mixin="trunk"
+              position="0 -0.5 0"
+              material="color: brown"
+            ></a-entity>
             <a-animation
               attribute="position"
               ease="linear"
@@ -281,8 +296,12 @@ Created by Alvin Wan (alvinwan.com)
             scale="0.3 0.3 0.3"
             position="0.5 0.55 0"
           >
-            <a-entity mixin="foliage"></a-entity>
-            <a-entity mixin="trunk" position="0 -0.5 0"></a-entity>
+            <a-entity mixin="foliage" material="color: green"></a-entity>
+            <a-entity
+              mixin="trunk"
+              position="0 -0.5 0"
+              material="color: brown"
+            ></a-entity>
             <a-animation
               attribute="position"
               ease="linear"
