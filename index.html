@@ -33,7 +33,8 @@
 
       <!-- Mixins & assets -->
       <a-assets>
-        <a-asset-item id="car" src="assets/car/car_low.obj"></a-asset-item>
+        <a-asset-item id="car" src="assets/car/sportcar.obj"></a-asset-item>
+        <a-asset-item id="mtl" src="assets/car/sportcar.mtl"></a-asset-item>
         <a-mixin
           id="foliage"
           geometry="
@@ -236,7 +237,7 @@
       <lp-cone
         amplitude="0.01"
         amplitude-variance="0.08"
-        scale="2 2 2"
+        scale="2.5 2 2"
         shadow
         position="0 -3.5 -1.5"
         rotation="90 0 0"
@@ -244,7 +245,7 @@
         radius-bottom="1.9"
         segments-radial="25"
         segments-height="25"
-        height="25"
+        height="50"
         emissive="#005DED"
         emissive-intensity="0.2"
       >
@@ -326,7 +327,7 @@
             mixin="text"
             height="40"
             width="40"
-            position="0 1.2 -3"
+            position="0 1.5 -3"
             opacity="0.75"
           ></a-text>
 
@@ -383,8 +384,8 @@
           <a-entity
             id="player"
             animation-mixer
-            obj-model="obj: #car"
-            scale="0.05 0.05 0.05"
+            obj-model="obj: #car; mtl: #mtl"
+            scale="0.2 0.2 0.2"
             rotation="0 180 0"
             player
             material="color: #abb3bd"
