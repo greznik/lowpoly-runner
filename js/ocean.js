@@ -8,7 +8,7 @@
 AFRAME.registerPrimitive("a-ocean", {
   defaultComponents: {
     ocean: {},
-    rotation: { x: -90, y: 0, z: 0 },
+    rotation: { x: -90, y: 10, z: 10 },
   },
   mappings: {
     width: "ocean.width",
@@ -41,14 +41,10 @@ AFRAME.registerComponent("ocean", {
     speedVariance: { default: 2 },
 
     // Material.
-    color: { default: "#317bec", type: "color" },
+    color: { default: "#2E4770", type: "color" },
     opacity: { default: 0.1 },
   },
 
-  /**
-   * Use play() instead of init(), because component mappings – unavailable as dependencies – are
-   * not guaranteed to have parsed when this component is initialized.
-   */
   play: function () {
     const el = this.el,
       data = this.data;

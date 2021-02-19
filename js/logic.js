@@ -113,7 +113,7 @@ addTreesRandomly = ({
   return numberOfTreesAdded;
 };
 
-addTreesRandomlyLoop = ({ intervalLength = 500 } = {}) => {
+addTreesRandomlyLoop = ({ intervalLength = 800 } = {}) => {
   treeTimer = setInterval(addTreesRandomly, intervalLength);
 };
 

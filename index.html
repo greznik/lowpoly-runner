@@ -7,15 +7,18 @@ Created by Alvin Wan (alvinwan.com)
     <title>Lowpoly runner</title>
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/alvinwan/aframe-low-poly@0.0.2/dist/aframe-low-poly.min.js"></script>
-    <script src="https://rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
+    <script src="https://unpkg.com/aframe-simple-sun-sky@^1.2.2/simple-sun-sky.js"></script>
     <script src="./js/ocean.js"></script>
     <script src="./js/logic.js"></script>
   </head>
   <body>
-    <a-scene>
-      <a-sky
-        material="shader: gradient; topColor: 255 0 0; bottomColor: 0 121 255;"
-      ></a-sky>
+    <a-scene fog="type: linear; color: #e81088; near:5; far:20">
+      <a-simple-sun-sky sun-position="0 0.1 -1" radius="3000" light-color="#000000" fog-color="#e81088" radius="20000"></a-simple-sun-sky>
+      <a-entity light="type: directional; color: #e81088; intensity: 0.6" position="0.7 0.4 -1"></a-entity>
+      <a-entity light="type: ambient; color: #e81088"></a-entity>
+      <!-- <a-sky
+        material="shader: gradient; topColor: 32 13 58; bottomColor: 206 94 130;"
+      ></a-sky> -->
 
       <!-- Mixins -->
       <a-assets>
@@ -115,7 +118,7 @@ Created by Alvin Wan (alvinwan.com)
         segments-radial="5"
         segments-height="3"
         height="1"
-        radius-top="0.15"
+        radius-top="1"
         radius-bottom="0.5"
         position="3 -0.1 -1.5"
       >
@@ -138,7 +141,7 @@ Created by Alvin Wan (alvinwan.com)
       </lp-cone>
       <lp-cone
         class="iceberg"
-        amplitude="0.12"
+        amplitude="0.3"
         segments-radial="7"
         segments-height="3"
         height="0.5"
@@ -197,11 +200,11 @@ Created by Alvin Wan (alvinwan.com)
         depth="50"
         width="50"
         amplitude="0"
-        amplitude-variance="0.1"
+        amplitude-variance="0.2"
         speed="1.5"
         speed-variance="1"
         opacity="1"
-        density="50"
+        density="100"
       ></a-ocean>
       <a-ocean
         depth="50"
@@ -350,8 +353,8 @@ Created by Alvin Wan (alvinwan.com)
           </a-entity>
 
           <!-- Player -->
-          <a-entity id="player" player material="color: red">
-            <a-sphere radius="0.05" color="#e81088">
+          <a-entity id="player" player material="color: #200D3A">
+            <a-sphere radius="0.05" color="#200D3A">
               <a-animation
                 repeat="indefinite"
                 direction="alternate"
