@@ -9,6 +9,10 @@
     <script src="./js/logic.js"></script>
   </head>
   <body>
+    <div id="splash">
+      <div class="loading"></div>
+    </div>
+    <!-- <a-scene loading-screen="dotsColor: red; backgroundColor: black" enabled="true"></a-scene> -->
     <a-scene fog="type: linear; color: #F83E70; near:5; far:18">
       <a-simple-sun-sky
         sun-position="0 0.1 -1"
@@ -238,7 +242,6 @@
         emissive-intensity="0.1"
       >
         <a-entity id="tree-container" position="0 .5 -1.5" rotation="-90 0 0">
-
           <!-- Trees -->
           <a-entity
             data-tree-position-index="1"
@@ -370,7 +373,16 @@
           </a-entity>
 
           <!-- Player -->
-          <a-entity id="player" obj-model="obj: #car" radius="0.05" position="100" scale="0.05 0.05 0.05" rotation="0 180 0" player material="color: #200D3A"></a-entity>
+          <a-entity
+            id="player"
+            obj-model="obj: #car"
+            position="100"
+            scale="0.05 0.05 0.05"
+            rotation="0 180 0"
+            player
+            material="color: #200D3A"
+            ></a-light
+          ></a-entity>
           <!-- <a-entity id="player" player material="color: #200D3A">
             <a-sphere radius="0.05" color="#200D3A">
               <a-animation

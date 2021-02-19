@@ -2,6 +2,13 @@ const POSITION_X_LEFT = -0.5;
 const POSITION_X_CENTER = 0;
 const POSITION_X_RIGHT = 0.5;
 
+document.addEventListener('DOMContentLoaded', function() {
+  let scene = document.querySelector('a-scene');
+  let splash = document.querySelector('#splash');
+  scene.addEventListener('loaded', function (e) {
+      splash.style.display = 'none';
+  });
+});
 /************
  * CONTROLS *
  ************/
