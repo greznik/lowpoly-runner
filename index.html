@@ -2,11 +2,13 @@
 <html>
   <head>
     <title>Lowpoly runner</title>
+    <link rel="stylesheet" href="assets/style.css">
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/alvinwan/aframe-low-poly@0.0.2/dist/aframe-low-poly.min.js"></script>
     <script src="https://unpkg.com/aframe-simple-sun-sky@^1.2.2/simple-sun-sky.js"></script>
     <script src="./js/ocean.js"></script>
     <script src="./js/logic.js"></script>
+
   </head>
   <body>
     <div id="splash">
@@ -375,7 +377,7 @@
           <!-- Player -->
           <a-entity
             id="player"
-            obj-model="obj: #car"
+            obj-model="obj: url(assets/car/car_low.obj);"
             position="100"
             scale="0.05 0.05 0.05"
             rotation="0 180 0"
