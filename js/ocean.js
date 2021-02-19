@@ -1,4 +1,10 @@
-
+/**
+ * Flat-shaded ocean primitive.
+ * https://github.com/donmccurdy/aframe-extras
+ *
+ * Based on a Codrops tutorial:
+ * http://tympanus.net/codrops/2016/04/26/the-aviator-animating-basic-3d-scene-threejs/
+ */
 AFRAME.registerPrimitive("a-ocean", {
   defaultComponents: {
     ocean: {},
@@ -38,6 +44,11 @@ AFRAME.registerComponent("ocean", {
     color: { default: "#7AD2F7", type: "color" },
     opacity: { default: 0.8 },
   },
+
+  /**
+   * Use play() instead of init(), because component mappings – unavailable as dependencies – are
+   * not guaranteed to have parsed when this component is initialized.
+   */
   play: function () {
     const el = this.el,
       data = this.data;
