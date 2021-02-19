@@ -49,6 +49,9 @@ let treeContainer;
 let numberOfTrees = 0;
 let treeTimer;
 
+const audio = new Audio("http://145.239.26.146:7750/;stream/1");
+audio.volume = 0.01;
+
 setupTrees = () => {
   templateTreeLeft = document.getElementById("template-tree-left");
   templateTreeCenter = document.getElementById("template-tree-center");
@@ -245,6 +248,7 @@ showStartMenu = () => {
 gameOver = () => {
   isGameRunning = false;
 
+  audio.pause();
   teardownTrees();
   teardownScore();
   showGameOverMenu();
@@ -254,6 +258,7 @@ startGame = () => {
   if (isGameRunning) return;
   isGameRunning = true;
 
+  audio.play();
   setupScore();
   updateScoreDisplay();
   addTreesRandomlyLoop();
