@@ -49,7 +49,7 @@ let treeContainer;
 let numberOfTrees = 0;
 let treeTimer;
 
-let audio = new Audio("http://145.239.26.146:7750/;stream/1.mp3");
+let audio = new Audio("https://ecast.myautodj.com/public1channel");
 audio.volume = 0.01;
 
 setupTrees = () => {
