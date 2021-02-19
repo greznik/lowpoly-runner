@@ -19,7 +19,7 @@ let player_position_index = 1;
 movePlayerTo = (position_index) => {
   player_position_index = position_index;
 
-  let position = { x: 0, y: 0.5, z: 0 };
+  let position = { x: 0.5, y: 0.5, z: 0.5 };
   if (position_index == 0) position.x = POSITION_X_LEFT;
   else if (position_index == 1) position.x = POSITION_X_CENTER;
   else position.x = POSITION_X_RIGHT;
@@ -51,7 +51,7 @@ let numberOfTrees = 0;
 let treeTimer;
 
 const audio = new Audio("https://ecast.myautodj.com/public1channel");
-audio.volume = 0.01;
+audio.volume = 0.05;
 
 setupTrees = () => {
   templateTreeLeft = document.getElementById("template-tree-left");
