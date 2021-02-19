@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Lowpoly runner</title>
-    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/alvinwan/aframe-low-poly@0.0.2/dist/aframe-low-poly.min.js"></script>
     <script src="https://unpkg.com/aframe-simple-sun-sky@^1.2.2/simple-sun-sky.js"></script>
     <script src="./js/ocean.js"></script>
@@ -23,8 +23,9 @@
       ></a-entity> -->
       <a-entity light="type: ambient; color: #e81088"></a-entity>
 
-      <!-- Mixins -->
+      <!-- Mixins & assets -->
       <a-assets>
+        <a-asset-item id="car" src="/assets/car/car_low.obj" preload="auto"></a-asset-item>
         <a-mixin
           id="foliage"
           geometry="
@@ -237,6 +238,7 @@
         emissive-intensity="0.1"
       >
         <a-entity id="tree-container" position="0 .5 -1.5" rotation="-90 0 0">
+
           <!-- Trees -->
           <a-entity
             data-tree-position-index="1"
@@ -368,7 +370,8 @@
           </a-entity>
 
           <!-- Player -->
-          <a-entity id="player" player material="color: #200D3A">
+          <a-entity id="player" obj-model="obj: #car" radius="0.05" position="100" scale="0.05 0.05 0.05" rotation="0 180 0" player material="color: #200D3A"></a-entity>
+          <!-- <a-entity id="player" player material="color: #200D3A">
             <a-sphere radius="0.05" color="#200D3A">
               <a-animation
                 repeat="indefinite"
@@ -397,7 +400,7 @@
                 ></a-animation>
               </a-light>
             </a-sphere>
-          </a-entity>
+          </a-entity> -->
         </a-entity>
       </lp-cone>
     </a-scene>
