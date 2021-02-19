@@ -11,7 +11,6 @@ let player_position_index = 1;
 
 /**
  * Move player to provided index
- * @param {int} Lane to move player to
  */
 movePlayerTo = (position_index) => {
   player_position_index = position_index;
@@ -273,10 +272,9 @@ window.onload = () => {
  * UTILITIES *
  *************/
 
-// /**
-//  * Shuffles array in place.
-//  * @param {Array} a items An array containing the items.
-//  */
+/**
+ * Shuffles array in place.
+ */
 shuffle = (a) => {
   let j, x, i;
   for (i = a.length - 1; i > 0; i--) {
