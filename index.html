@@ -15,13 +15,11 @@
     <div id="splash">
       <div class="loading"></div>
     </div>
-    <a-scene fog="type: linear; color: #F83E70; near:5; far:18">
+    <a-scene fog="type: linear; color: #d30cb8; near:5; far:18">
       <a-simple-sun-sky
         sun-position="0 0.1 -1"
-        radius="12"
         light-color="#0D0A1B"
-        fog-color="#F83E70"
-        radius="20000"
+        fog-color="#d30cb8"
       ></a-simple-sun-sky>
       <!-- <a-entity
         light="type: directional; color: #dc64fc; intensity: 2"
@@ -108,7 +106,7 @@
           geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
           material="color: white; shader: flat"
           scale="0.5 0.5 0.5"
-          raycaster="far: 50; interval: 1000; objects: .clickable"
+          raycaster="far: 100; interval: 1000; objects: .clickable"
         ></a-entity>
         <a-animation
           begin="fusing"
@@ -131,6 +129,7 @@
         radius-top="1"
         radius-bottom="0.5"
         position="3 -0.1 -1.5"
+        color="deepskyblue"
       >
         <a-animation
           attribute="rotation"
@@ -158,6 +157,7 @@
         radius-top="0.25"
         radius-bottom="0.35"
         position="-3 -0.1 -0.5"
+        color="deepskyblue"
       >
         <a-animation
           attribute="rotation"
@@ -186,6 +186,7 @@
         radius-top="0.25"
         radius-bottom="0.25"
         position="-5 -0.2 -3.5"
+        color="deepskyblue"
       >
         <a-animation
           attribute="rotation"
@@ -211,10 +212,10 @@
         width="50"
         amplitude="0"
         amplitude-variance="0.2"
-        speed="1.5"
-        speed-variance="1"
-        opacity="1"
-        density="100"
+        speed="2.5"
+        speed-variance="2"
+        opacity="0.9"
+        density="80"
       ></a-ocean>
       <a-ocean
         depth="50"
@@ -222,9 +223,9 @@
         opacity="0.5"
         amplitude="0"
         amplitude-variance="0.15"
-        speed="1.5"
+        speed="0.5"
         speed-variance="1"
-        density="50"
+        density="150"
       ></a-ocean>
 
       <!-- Platform -->
@@ -377,11 +378,11 @@
           <!-- Player -->
           <a-entity
             id="player"
-            obj-model="obj: url(assets/car/car_low.obj);"
+            obj-model="obj: #car"
             scale="0.05 0.05 0.05"
             rotation="0 180 0"
             player
-            material="color: #200D3A"
+            material="color: #860029"
             ></a-light
           ></a-entity>
           <!-- <a-entity id="player" player material="color: #200D3A">
