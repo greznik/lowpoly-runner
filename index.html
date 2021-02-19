@@ -15,7 +15,6 @@
     <div id="splash">
       <div class="loading"></div>
     </div>
-    <!-- <a-scene loading-screen="dotsColor: red; backgroundColor: black" enabled="true"></a-scene> -->
     <a-scene fog="type: linear; color: #F83E70; near:5; far:18">
       <a-simple-sun-sky
         sun-position="0 0.1 -1"
@@ -101,7 +100,7 @@
       <a-light intensity="0.8" type="ambient" color="#B4C5EC"></a-light>
 
       <!-- Camera -->
-      <a-camera lane-controls position="0 0 2.5">
+      <a-camera lane-controls position="0 0 2.5" wasd-controls-enabled="false">
         <a-entity
           id="cursor-mobile"
           cursor="fuse: true; fuseTimeout: 250"
