@@ -17,18 +17,17 @@
     <div id="splash">
       <div class="loading"></div>
     </div>
-    <a-scene fog="type: linear; color: #d30cb8; near:5; far:18">
+    <a-scene fog="type: linear; color: #CE5E82; near:7; far:18">
       <a-simple-sun-sky
         sun-position="0 0.1 -1"
-        light-color="#0D0A1B"
-        fog-color="#d30cb8"
+        light-color="#2E4770"
+        dark-color="#200D3A"
+        dar
+        fog-color="#CE5E82"
       ></a-simple-sun-sky>
       <a-entity
-        light="type: directional; color: #d30cb8; intensity: 2"
-        position="0 0.1 -1"
-      ></a-entity>
-      <a-entity
-        light="type: ambient; color: #d30cb8; intensity: 0.3"
+        light="type: directional; castShadow:true; color: #CE5E82; intensity: 1;"
+        position="0.1 1 -1"
       ></a-entity>
 
       <!-- Mixins & assets -->
@@ -96,11 +95,11 @@
       <a-light
         type="directional"
         castShadow="true"
-        intensity="0.4"
-        color="#D0EAF9;"
+        intensity="0.3"
+        color="#CE5E82;"
         position="5 3 1"
       ></a-light>
-      <a-light intensity="0.8" type="ambient" color="#B4C5EC"></a-light>
+      <a-light intensity="0.1"  type="ambient" color="#ECA089;"></a-light>
 
       <!-- Camera -->
       <a-camera lane-controls position="0 0 2.5" wasd-controls-enabled="false">
@@ -134,7 +133,6 @@
         radius-top="1"
         radius-bottom="0.5"
         position="3 -0.1 -1.5"
-        color="deepskyblue"
       >
         <a-animation
           attribute="rotation"
@@ -162,7 +160,6 @@
         radius-top="0.25"
         radius-bottom="0.35"
         position="-3 -0.1 -0.5"
-        color="deepskyblue"
       >
         <a-animation
           attribute="rotation"
@@ -191,7 +188,6 @@
         radius-top="0.25"
         radius-bottom="0.25"
         position="-5 -0.2 -3.5"
-        color="deepskyblue"
       >
         <a-animation
           attribute="rotation"
@@ -216,7 +212,7 @@
         depth="50"
         width="50"
         amplitude="0"
-        amplitude-variance="0.2"
+        amplitude-variance="0.15"
         speed="2.5"
         speed-variance="2"
         opacity="0.9"
@@ -235,19 +231,19 @@
 
       <!-- Platform -->
       <lp-cone
-        amplitude="0.01"
+        amplitude="0.02"
         amplitude-variance="0.08"
-        scale="2.5 2 2"
+        scale="2 2 2"
         shadow
         position="0 -3.5 -1.5"
         rotation="90 0 0"
         radius-top="1.9"
         radius-bottom="1.9"
-        segments-radial="25"
-        segments-height="25"
+        segments-radial="20"
+        segments-height="20"
         height="50"
         emissive="#005DED"
-        emissive-intensity="0.2"
+        emissive-intensity="0.5"
       >
         <a-entity id="tree-container" position="0 .5 -1.5" rotation="-90 0 0">
           <!-- Trees -->
@@ -333,7 +329,7 @@
 
           <!-- Menus -->
           <a-entity id="menu-container" visible="false">
-            <a-entity id="start-menu" position="0 1.1 -3">
+            <a-entity id="start-menu" position="0 1.5 -3">
               <a-entity id="start-copy" position="0 1 0">
                 <a-text
                   value="Turn left and right to move your player, and avoid the trees!"
@@ -385,7 +381,7 @@
             id="player"
             animation-mixer
             obj-model="obj: #car; mtl: #mtl"
-            scale="0.15 0.07 0.15"
+            scale="0.13 0.13 0.13"
             rotation="0 180 0"
             player
             material="color: #abb3bd"

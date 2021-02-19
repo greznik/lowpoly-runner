@@ -34,7 +34,7 @@ AFRAME.registerComponent("ocean", {
     speedVariance: { default: 2 },
 
     // Material.
-    color: { default: "#2E4770", type: "color" },
+    color: { default: "deepskyblue", type: "color" },
     opacity: { default: 0.1 },
   },
 
