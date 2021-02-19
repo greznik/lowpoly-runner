@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Lowpoly runner</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wave | Lowpoly retrowave runner</title>
     <link rel='icon' href='assets/favicon.ico' type='image/x-icon'/ >
     <link rel="stylesheet" href="assets/style.css" />
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
@@ -24,7 +27,9 @@
         light="type: directional; color: #d30cb8; intensity: 2"
         position="0 0.1 -1"
       ></a-entity>
-      <a-entity light="type: ambient; color: #d30cb8; intensity: 0.3"></a-entity>
+      <a-entity
+        light="type: ambient; color: #d30cb8; intensity: 0.3"
+      ></a-entity>
 
       <!-- Mixins & assets -->
       <a-assets>
@@ -326,7 +331,7 @@
           ></a-text>
 
           <!-- Menus -->
-          <a-entity id="menu-container">
+          <a-entity id="menu-container" visible="false">
             <a-entity id="start-menu" position="0 1.1 -3">
               <a-entity id="start-copy" position="0 1 0">
                 <a-text
