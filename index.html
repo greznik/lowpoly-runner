@@ -3,13 +3,12 @@
   <head>
     <title>Lowpoly runner</title>
     <link rel='icon' href='assets/favicon.ico' type='image/x-icon'/ >
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/style.css" />
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/alvinwan/aframe-low-poly@0.0.2/dist/aframe-low-poly.min.js"></script>
     <script src="https://unpkg.com/aframe-simple-sun-sky@^1.2.2/simple-sun-sky.js"></script>
     <script src="./js/ocean.js"></script>
     <script src="./js/logic.js"></script>
-
   </head>
   <body>
     <div id="splash">
@@ -21,11 +20,11 @@
         light-color="#0D0A1B"
         fog-color="#d30cb8"
       ></a-simple-sun-sky>
-      <!-- <a-entity
-        light="type: directional; color: #dc64fc; intensity: 2"
-        position="0.7 0.4 -1"
-      ></a-entity> -->
-      <a-entity light="type: ambient; color: #e81088"></a-entity>
+      <a-entity
+        light="type: directional; color: #d30cb8; intensity: 2"
+        position="0 0.1 -1"
+      ></a-entity>
+      <a-entity light="type: ambient; color: #d30cb8; intensity: 0.3"></a-entity>
 
       <!-- Mixins & assets -->
       <a-assets>
@@ -230,19 +229,19 @@
 
       <!-- Platform -->
       <lp-cone
-        amplitude="0.05"
-        amplitude-variance="0.05"
+        amplitude="0.01"
+        amplitude-variance="0.08"
         scale="2 2 2"
         shadow
         position="0 -3.5 -1.5"
         rotation="90 0 0"
         radius-top="1.9"
         radius-bottom="1.9"
-        segments-radial="20"
-        segments-height="20"
-        height="20"
+        segments-radial="25"
+        segments-height="25"
+        height="25"
         emissive="#005DED"
-        emissive-intensity="0.1"
+        emissive-intensity="0.2"
       >
         <a-entity id="tree-container" position="0 .5 -1.5" rotation="-90 0 0">
           <!-- Trees -->
@@ -382,8 +381,9 @@
             scale="0.05 0.05 0.05"
             rotation="0 180 0"
             player
-            material="color: #860029"
-            ></a-light
+            material="color: #abb3bd"
+          >
+            <a-light type="point" intensity="0.35" color="#d30cb8"></a-light
           ></a-entity>
           <!-- <a-entity id="player" player material="color: #200D3A">
             <a-sphere radius="0.05" color="#200D3A">
