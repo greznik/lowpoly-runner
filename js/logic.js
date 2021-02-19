@@ -9,9 +9,6 @@ const POSITION_X_RIGHT = 0.5;
 // Position is one of 0 (left), 1 (center), or 2 (right)
 let player_position_index = 1;
 
-/**
- * Move player to provided index
- */
 movePlayerTo = (position_index) => {
   player_position_index = position_index;
 
@@ -22,9 +19,7 @@ movePlayerTo = (position_index) => {
   document.getElementById("player").setAttribute("position", position);
 };
 
-/**
- * Determine how `movePlayerTo` will be fired. Use camera's rotation.
- **/
+
 setupControls = () => {
   AFRAME.registerComponent("lane-controls", {
     tick: function (time, timeDelta) {
@@ -49,7 +44,7 @@ let treeContainer;
 let numberOfTrees = 0;
 let treeTimer;
 
-let audio = new Audio("https://ecast.myautodj.com/public1channel");
+const audio = new Audio("https://ecast.myautodj.com/public1channel");
 audio.volume = 0.01;
 
 setupTrees = () => {
@@ -83,9 +78,7 @@ addTreeTo = (position_index) => {
   addTree(template.cloneNode(true));
 };
 
-/**
- * Add any number of trees across different lanes, randomly.
- **/
+
 addTreesRandomly = ({
   probTreeLeft = 0.5,
   probTreeCenter = 0.5,
@@ -265,7 +258,7 @@ startGame = () => {
   hideAllMenus();
 };
 
-setupControls(); // TODO: AFRAME.registerComponent has to occur before window.onload?
+setupControls();
 
 window.onload = () => {
   setupAllMenus();
@@ -277,9 +270,6 @@ window.onload = () => {
  * UTILITIES *
  *************/
 
-/**
- * Shuffles array in place.
- */
 shuffle = (a) => {
   let j, x, i;
   for (i = a.length - 1; i > 0; i--) {
@@ -291,9 +281,6 @@ shuffle = (a) => {
   return a;
 };
 
-/**
- * Checks for mobile and tablet platforms.
- */
 mobileCheck = () => {
   var check = false;
   (function (a) {
