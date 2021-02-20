@@ -245,7 +245,7 @@
         emissive="#CE5E82"
         emissive-intensity="0.6"
       >
-        <a-entity id="tree-container" position="0 .5 -1.5" rotation="-90 0 0">
+        <a-entity id="tree-container" position="0 .5 -1.5" rotation="-90 0 0" visible="false">
           <!-- Trees -->
           <a-entity
             data-tree-position-index="1"
@@ -330,7 +330,7 @@
           <!-- Menus -->
           <a-entity id="menu-container" visible="false">
             <a-entity id="start-menu" position="0 1.5 -3">
-              <a-entity id="start-copy" position="0 1 0">
+              <a-entity id="start-copy" position="0 0.7 0">
                 <a-text
                   value="Turn left and right to move your player, and avoid the trees!"
                   mixin="copy"
@@ -350,7 +350,7 @@
               </a-entity>
               <a-text value="Wave" mixin="title"></a-text>
             </a-entity>
-            <a-entity id="game-over" position="0 1.1 -3">
+            <a-entity id="game-over" position="0 1.3 -3">
               <a-text
                 value="?"
                 mixin="heading"
@@ -362,11 +362,11 @@
                 <a-text
                   value="Restart"
                   mixin="heading"
-                  position="0 0.7 0"
+                  position="0 0.8 0"
                 ></a-text>
                 <a-box
                   id="restart-button"
-                  position="0 0.6 -0.05"
+                  position="0 0.7 -0.05"
                   width="2"
                   height="0.6"
                   depth="0.1"

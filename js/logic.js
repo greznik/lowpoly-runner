@@ -60,6 +60,7 @@ setupTrees = () => {
   treeContainer = document.getElementById("tree-container");
   templates = [templateTreeLeft, templateTreeCenter, templateTreeRight];
 
+  showEntity(treeContainer);
   removeTree(templateTreeLeft);
   removeTree(templateTreeRight);
   removeTree(templateTreeCenter);
